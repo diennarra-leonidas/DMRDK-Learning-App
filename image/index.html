@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DMRDK Learning App</title>
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+
+<correct-answer class="wav"></correct-answer>
+<wrong-answer class="wav"></wrong-answer>
+
+
+
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+     LANDING PAGE
+========================================================= -->
+
+<div id="landingPage">
+
+    <span class="orb orb1"></span>
+    <span class="orb orb2"></span>
+    <span class="orb orb3"></span>
+
+    <div class="landing-topbar">
+
+        <div class="landing-brand">
+            <div class="logo-mini">
+                <svg class="dmrdk-logo" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DMRDK logo">
+                    <defs>
+                        <linearGradient id="dmBubA" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0" stop-color="#ffffff"/>
+                            <stop offset="1" stop-color="#e4dbff"/>
+                        </linearGradient>
+                        <linearGradient id="dmTxtA" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0" stop-color="#5b21b6"/>
+                            <stop offset="1" stop-color="#8b5cf6"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M28 6H172A22 22 0 0 1 194 28V42A22 22 0 0 1 172 64H54L30 77L37 64H28A22 22 0 0 1 6 42V28A22 22 0 0 1 28 6Z" fill="url(#dmBubA)"/>
+                    <text x="100" y="41" text-anchor="middle" font-family="'Arial Black', 'Segoe UI', Arial, sans-serif" font-weight="900" font-size="28" textLength="148" lengthAdjust="spacingAndGlyphs" fill="url(#dmTxtA)">DMRDK</text>
+                    <circle cx="88" cy="53" r="2.8" fill="#c4b5fd"/>
+                    <circle cx="100" cy="53" r="2.8" fill="#8b5cf6"/>
+                    <circle cx="112" cy="53" r="2.8" fill="#5b21b6"/>
+                </svg>
+            </div>
+            <span class="brand-text">Learning App</span>
+        </div>
+
+        <div class="landing-langs">
+            <span class="lang-pill">🇺🇸 English</span>
+            <span class="lang-pill">🇰🇷 Korean</span>
+            <span class="lang-pill">🇨🇳 Chinese</span>
+        </div>
+
+    </div>
+
+
+    <div class="landing-inner">
+
+        <div class="landing-left">
+
+            <span class="landing-badge">🎓 Offline · Free · With Voice Over</span>
+
+            <h1>
+                Learn <span class="grad">English, Korean</span>
+                &amp; <span class="grad">Chinese</span>
+                all in one place.
+            </h1>
+
+            <p>
+                An offline language-learning application for practicing
+                English, Korean, and Chinese through translation,
+                conversations with voice over, vocabulary, and
+                interactive games.
+            </p>
+
+            <div class="landing-actions">
+
+                <button class="start-btn" onclick="enterApp()">
+                    Start Learning →
+                </button>
+
+                <span class="landing-note">
+                    No internet needed
+                </span>
+
+            </div>
+
+            <div class="landing-stats">
+
+                <div>
+                    <strong id="landingWords">500+</strong>
+                    <span>Words &amp; phrases</span>
+                </div>
+
+                <div>
+                    <strong>7</strong>
+                    <span>Conversations</span>
+                </div>
+
+                <div>
+                    <strong>4</strong>
+                    <span>Games</span>
+                </div>
+
+                <div>
+                    <strong>3</strong>
+                    <span>Languages</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="showcase">
+
+            <span class="float-chip chip1">🔊 Voice over</span>
+            <span class="float-chip chip2">🏆 Score tracker</span>
+
+            <div class="glass show-main">
+
+                <h3>👋 Say “Hello” in 3 languages</h3>
+
+                <div class="show-row">
+                    <span class="flag">🇺🇸</span>
+                    <div>
+                        <b>Hello</b>
+                        <small>English</small>
+                    </div>
+                </div>
+
+                <div class="show-row">
+                    <span class="flag">🇰🇷</span>
+                    <div>
+                        <b>안녕하세요</b>
+                        <small>an-nyeong-ha-se-yo</small>
+                    </div>
+                </div>
+
+                <div class="show-row">
+                    <span class="flag">🇨🇳</span>
+                    <div>
+                        <b>你好</b>
+                        <small>nǐ hǎo</small>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="show-tiles">
+
+                <div class="glass show-tile">
+                    <div class="ti">🌐</div>
+                    <span>Translator</span>
+                </div>
+
+                <div class="glass show-tile">
+                    <div class="ti">💬</div>
+                    <span>Conversation</span>
+                </div>
+
+                <div class="glass show-tile">
+                    <div class="ti">📚</div>
+                    <span>Vocabulary</span>
+                </div>
+
+                <div class="glass show-tile">
+                    <div class="ti">🎮</div>
+                    <span>Games</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="landing-footer">
+        Developed by
+        <b>Dennise Mae Vargas</b> ·
+        <b>Mikel James Trinidad</b> ·
+        <b>Rowela Ros</b> ·
+        <b>Diennarra Barao</b> ·
+        <b>Kaye Enclano</b>
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     MAIN APPLICATION
+========================================================= -->
+
+<div id="appPage" class="hidden">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+            <div class="sidebar-logo">
+                <svg class="dmrdk-logo" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DMRDK logo">
+                    <defs>
+                        <linearGradient id="dmBubB" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0" stop-color="#ffffff"/>
+                            <stop offset="1" stop-color="#e4dbff"/>
+                        </linearGradient>
+                        <linearGradient id="dmTxtB" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0" stop-color="#5b21b6"/>
+                            <stop offset="1" stop-color="#8b5cf6"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M28 6H172A22 22 0 0 1 194 28V42A22 22 0 0 1 172 64H54L30 77L37 64H28A22 22 0 0 1 6 42V28A22 22 0 0 1 28 6Z" fill="url(#dmBubB)"/>
+                    <text x="100" y="41" text-anchor="middle" font-family="'Arial Black', 'Segoe UI', Arial, sans-serif" font-weight="900" font-size="28" textLength="148" lengthAdjust="spacingAndGlyphs" fill="url(#dmTxtB)">DMRDK</text>
+                    <circle cx="88" cy="53" r="2.8" fill="#c4b5fd"/>
+                    <circle cx="100" cy="53" r="2.8" fill="#8b5cf6"/>
+                    <circle cx="112" cy="53" r="2.8" fill="#5b21b6"/>
+                </svg>
+            </div>
+            <span class="brand-text">Learning App</span>
+        </div>
+
+        <div class="profile">
+
+            <div
+                class="profile-icon"
+                id="profileIcon"
+                role="button"
+                tabindex="0"
+                onclick="toggleNicknameEditor()"
+                onkeydown="if(event.key === 'Enter' || event.key === ' '){ event.preventDefault(); toggleNicknameEditor(); }"
+                title="Click to change nickname"
+                aria-label="Change nickname"
+            >
+                <span id="profileInitial">L</span>
+                <span class="edit-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                </span>
+            </div>
+
+            <h3 id="profileName">
+                Learner
+            </h3>
+
+            <div id="nicknameEditor">
+
+                <input
+                    type="text"
+                    id="nicknameInput"
+                    class="nickname-input"
+                    placeholder="Enter nickname"
+                    maxlength="20"
+                    onkeydown="if(event.key === 'Enter') saveNickname();"
+                >
+
+                <button
+                    class="save-name-btn"
+                    onclick="saveNickname()"
+                >
+                    Save Name
+                </button>
+
+                <p class="nick-note">
+                    Leave it empty to remove the nickname.
+                    Scores stay saved under the name that played.
+                </p>
+
+            </div>
+
+            <p class="profile-hint hidden" id="profileHint">
+                Tap the circle to change nickname
+            </p>
+
+        </div>
+
+
+        <div class="sidebar-scores" id="sidebarScores">
+
+            <button
+                type="button"
+                class="sd-toggle"
+                id="sdToggle"
+                aria-expanded="false"
+                aria-controls="sdBody"
+                onclick="toggleScoreDashboard()"
+            >
+                <span>🏆 Score Dashboard</span>
+                <svg class="sd-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+
+            <div class="sd-body" id="sdBody">
+
+                <p class="sd-for" id="sdFor">Scores for: Learner</p>
+
+                <div class="sd-summary">
+
+                    <div class="sd-box">
+                        <strong id="sdPlayed">0</strong>
+                        <span>Games played</span>
+                    </div>
+
+                    <div class="sd-box">
+                        <strong id="sdBest">—</strong>
+                        <span>Best result</span>
+                    </div>
+
+                    <div class="sd-box">
+                        <strong id="sdAvg">—</strong>
+                        <span>Average accuracy</span>
+                    </div>
+
+                    <div class="sd-box">
+                        <strong id="sdLast">—</strong>
+                        <span>Last game played</span>
+                    </div>
+
+                </div>
+
+                <div id="scoreDashboardGrid" class="sd-grid"></div>
+
+                <div id="sdPlayers" class="sd-progress"></div>
+
+                <div id="sdProgress" class="sd-progress"></div>
+
+                <button
+                    type="button"
+                    class="reset-scores-btn"
+                    onclick="resetScores()"
+                >
+                    Reset my scores
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="sidebar-lang hidden" id="gameLangBox">
+
+            <p class="sl-title">🌐 Game language</p>
+
+            <div class="sl-buttons" role="group" aria-label="Game language">
+
+                <button type="button" class="sl-btn" data-lang="korean" aria-pressed="false" onclick="setGameLanguage('korean')">🇰🇷 Korean only</button>
+
+                <button type="button" class="sl-btn" data-lang="chinese" aria-pressed="false" onclick="setGameLanguage('chinese')">🇨🇳 Chinese only</button>
+
+                <button type="button" class="sl-btn" data-lang="both" aria-pressed="true" onclick="setGameLanguage('both')">🌏 Korean + Chinese</button>
+
+            </div>
+
+            <p class="sl-note">Changing the language restarts the game you are playing.</p>
+
+        </div>
+
+        <nav class="nav-menu">
+
+            <button
+                class="nav-btn active"
+                onclick="showSection('home', this)"
+            >
+                🏠 Home
+            </button>
+
+            <button
+                class="nav-btn"
+                onclick="showSection('translator', this)"
+            >
+                🌐 Offline Translator
+            </button>
+
+            <button
+                class="nav-btn"
+                onclick="showSection('conversation', this)"
+            >
+                💬 Conversation
+            </button>
+
+            <button
+                class="nav-btn"
+                onclick="showSection('vocabulary', this)"
+            >
+                📚 Vocabulary
+            </button>
+
+            <button
+                class="nav-btn"
+                onclick="showSection('games', this)"
+            >
+                🎮 Games
+            </button>
+
+            <button
+                class="nav-btn"
+                onclick="showSection('about', this)"
+            >
+                👥 About
+            </button>
+
+            <button
+                class="nav-btn"
+                onclick="openExitConfirm()"
+            >
+                🚪 Exit
+            </button>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+
+        <!-- =================================================
+             HOME
+        ================================================= -->
+
+        <section id="home" class="section active">
+
+            <div class="hero">
+
+                <div>
+
+                    <h2>
+                        Welcome, <span id="welcomeName">Learner</span>! 👋
+                    </h2>
+
+                    <p>
+                        Learn useful words and practice conversations
+                        in English, Korean, and Chinese.
+                    </p>
+
+                </div>
+
+                <div class="hero-flags">🇺🇸🇰🇷🇨🇳</div>
+
+            </div>
+
+
+            <div class="home-stats">
+
+                <div class="stat-card">
+                    <div class="stat-icon">🎮</div>
+                    <div>
+                        <strong id="homeGamesPlayed">0</strong>
+                        <span>Games played</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div>
+                        <strong id="homeBestResult">—</strong>
+                        <span>Best result</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div>
+                        <strong id="homeWords">0</strong>
+                        <span>Words &amp; phrases</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">💬</div>
+                    <div>
+                        <strong id="homeConvos">0</strong>
+                        <span>Conversations</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <h1 class="page-title">
+                Learning Dashboard
+            </h1>
+
+            <p class="page-description">
+                Choose a learning activity below.
+            </p>
+
+            <div class="dashboard-grid">
+
+                <div class="dashboard-card" onclick="showSection('translator')">
+
+                    <div class="icon">🌐</div>
+
+                    <h3>Translator</h3>
+
+                    <p>
+                        Translate vocabulary between English,
+                        Korean, and Chinese.
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-card" onclick="showSection('conversation')">
+
+                    <div class="icon">💬</div>
+
+                    <h3>Conversation</h3>
+
+                    <p>
+                        Practice useful everyday conversations
+                        with voice over.
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-card" onclick="showSection('vocabulary')">
+
+                    <div class="icon">📚</div>
+
+                    <h3>Vocabulary</h3>
+
+                    <p>
+                        Learn common words with pronunciation.
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-card" onclick="showSection('games')">
+
+                    <div class="icon">🎮</div>
+
+                    <h3>Games</h3>
+
+                    <p>
+                        Test your knowledge through interactive games.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ABOUT
+        ================================================= -->
+
+        <section id="about" class="section">
+
+            <div class="about-section">
+
+                <div class="about-head">
+
+                    <span class="about-eyebrow">About</span>
+
+                    <h2>Meet the Developers</h2>
+
+                    <p class="about-intro">
+                        DMRDK Learning App is an offline language-learning
+                        web application made to help learners practice
+                        English, Korean, and Chinese through translation,
+                        conversations with voice over, vocabulary, and games.
+                    </p>
+
+                </div>
+
+                <div class="creator-features">
+
+                    <div class="creator-feature">
+
+                    <img
+                        class="creator-photo"
+                        src="images/dennise-mae-vargas.jpg"
+                        alt="Dennise Mae Vargas"
+                    >
+
+                    <div class="creator-info">
+
+                        <span class="creator-role">Developer</span>
+
+                        <h3>Dennise Mae Vargas</h3>
+
+                        <ul class="creator-contacts">
+
+                            <li>
+                                <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+                                <span>
+                                    <span class="contact-label">Contact</span>
+                                    09300177642
+                                </span>
+                            </li>
+
+                            <li>
+                                <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></span>
+                                <span>
+                                    <span class="contact-label">Facebook</span>
+                                    Dennise Mae Alpuerto Vargas
+                                </span>
+                            </li>
+
+                            <li>
+                                <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+                                <span>
+                                    <span class="contact-label">Instagram</span>
+                                    dennyyy_saaa
+                                </span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="creator-feature">
+
+                    <img
+                        class="creator-photo"
+                        src="images/mikel-james-trinidad.jpg"
+                        alt="Mikel James Trinidad"
+                    >
+
+                    <div class="creator-info">
+
+                        <span class="creator-role">Developer</span>
+
+                        <h3>Mikel James Trinidad</h3>
+
+                        <ul class="creator-contacts">
+
+                            <li>
+                                <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+                                <span>
+                                    <span class="contact-label">Contact</span>
+                                    0918168843
+                                </span>
+                            </li>
+
+                            <li>
+                                <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></span>
+                                <span>
+                                    <span class="contact-label">Facebook</span>
+                                    Mikel James Trinidad
+                                </span>
+                            </li>
+
+                            <li>
+                                <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+                                <span>
+                                    <span class="contact-label">Instagram</span>
+                                    mj_trndd
+                                </span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                    <div class="creator-feature">
+
+                    <img
+                        class="creator-photo"
+                        src="images/diennarra-barao.jpg"
+                        alt="Diennarra Barao"
+                    >
+
+                    <div class="creator-info">
+
+                        <span class="creator-role">Developer</span>
+
+                        <h3>Diennarra Barao</h3>
+
+                        <ul class="creator-contacts">
+
+                            <li>
+                                <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+                                <span>
+                                    <span class="contact-label">Contact</span>
+                                    0923168551
+                                </span>
+                            </li>
+
+                            <li>
+                                <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></span>
+                                <span>
+                                    <span class="contact-label">Facebook</span>
+                                    Diennarra Barao
+                                </span>
+                            </li>
+
+                            <li>
+                                <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+                                <span>
+                                    <span class="contact-label">Instagram</span>
+                                    di3n_dan
+                                </span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                    <div class="creator-feature">
+
+                    <img
+                        class="creator-photo"
+                        src="images/rowela-ros.jpg"
+                        alt="Rowela Ros"
+                    >
+
+                    <div class="creator-info">
+
+                        <span class="creator-role">Developer</span>
+
+                        <h3>Rowela Ros</h3>
+
+                        <ul class="creator-contacts">
+
+                            <li>
+                                <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+                                <span>
+                                    <span class="contact-label">Contact</span>
+                                    09919536229
+                                </span>
+                            </li>
+
+                            <li>
+                                <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></span>
+                                <span>
+                                    <span class="contact-label">Facebook</span>
+                                    Rowela Tuazon Ros
+                                </span>
+                            </li>
+
+                            <li>
+                                <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+                                <span>
+                                    <span class="contact-label">Instagram</span>
+                                    welabanana
+                                </span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                    <div class="creator-feature">
+
+                    <img
+                        class="creator-photo"
+                        src="images/kaye-enclano.jpg"
+                        alt="Kaye Enclano"
+                    >
+
+                    <div class="creator-info">
+
+                        <span class="creator-role">Developer</span>
+
+                        <h3>Kaye Enclano</h3>
+
+                        <ul class="creator-contacts">
+
+                            <li>
+                                <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+                                <span>
+                                    <span class="contact-label">Contact</span>
+                                    09278292442
+                                </span>
+                            </li>
+
+                            <li>
+                                <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></span>
+                                <span>
+                                    <span class="contact-label">Facebook</span>
+                                    Kaye Enclano
+                                </span>
+                            </li>
+
+                            <li>
+                                <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+                                <span>
+                                    <span class="contact-label">Instagram</span>
+                                    kayex
+                                </span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             TRANSLATOR
+        ================================================= -->
+
+        <section id="translator" class="section">
+
+            <div class="tr-head">
+
+                <div>
+
+                    <h1 class="page-title">
+                        Offline Translator 🌐
+                    </h1>
+
+                    <p class="page-description">
+                        Translate words using the built-in vocabulary database.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="kbToggle"
+                    class="kb-toggle"
+                    onclick="toggleKeyboard()"
+                    aria-expanded="false"
+                    aria-controls="kbPanel"
+                    title="Korean and Chinese keyboard"
+                >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></svg>
+                    Keyboard
+                </button>
+
+            </div>
+
+            <div class="translator-box gt-card">
+
+                <!-- Language bar -->
+                <div class="gt-bar">
+
+                    <div class="gt-tabs" role="group" aria-label="Translate from">
+
+                        <button type="button" class="gt-tab" data-side="from" data-lang="english" onclick="setTranslatorLanguage('from', 'english')">English</button>
+
+                        <button type="button" class="gt-tab" data-side="from" data-lang="korean" onclick="setTranslatorLanguage('from', 'korean')">Korean</button>
+
+                        <button type="button" class="gt-tab" data-side="from" data-lang="chinese" onclick="setTranslatorLanguage('from', 'chinese')">Chinese</button>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="gt-swap"
+                        onclick="swapLanguages()"
+                        title="Swap languages"
+                        aria-label="Swap languages"
+                    >
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h12"/><path d="m16 3 4 4-4 4"/><path d="M17 17H5"/><path d="m8 21-4-4 4-4"/></svg>
+                    </button>
+
+                    <div class="gt-tabs" role="group" aria-label="Translate to">
+
+                        <button type="button" class="gt-tab" data-side="to" data-lang="korean" onclick="setTranslatorLanguage('to', 'korean')">Korean</button>
+
+                        <button type="button" class="gt-tab" data-side="to" data-lang="english" onclick="setTranslatorLanguage('to', 'english')">English</button>
+
+                        <button type="button" class="gt-tab" data-side="to" data-lang="chinese" onclick="setTranslatorLanguage('to', 'chinese')">Chinese</button>
+
+                    </div>
+
+                    <!-- Kept hidden: the translator reads the languages from these -->
+                    <select id="fromLanguage" class="hidden">
+                        <option value="english">English</option>
+                        <option value="korean">Korean</option>
+                        <option value="chinese">Chinese</option>
+                    </select>
+
+                    <select id="toLanguage" class="hidden">
+                        <option value="korean">Korean</option>
+                        <option value="english">English</option>
+                        <option value="chinese">Chinese</option>
+                    </select>
+
+                </div>
+
+
+                <!-- Input and translation side by side -->
+                <div class="gt-panels">
+
+                    <div class="gt-panel gt-in">
+
+                        <textarea
+                            id="translateInput"
+                            class="gt-input"
+                            placeholder="Type a vocabulary word"
+                            maxlength="100"
+                            spellcheck="false"
+                            autocomplete="off"
+                            oninput="onTranslatorInput()"
+                        ></textarea>
+
+                        <button
+                            type="button"
+                            id="gtClear"
+                            class="gt-icon-btn gt-clear hidden"
+                            onclick="clearTranslator()"
+                            title="Clear"
+                            aria-label="Clear text"
+                        >
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
+                        </button>
+
+                        <div class="gt-foot">
+                            <span id="gtCount" class="gt-count">0 / 100</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="gt-panel gt-out">
+
+                        <div id="outputResult" class="gt-output"></div>
+
+                        <div id="inputResult" class="hidden"></div>
+
+                        <div class="gt-foot gt-foot-right">
+
+                            <button
+                                type="button"
+                                id="gtCopy"
+                                class="gt-icon-btn"
+                                onclick="copyTranslation()"
+                                title="Copy translation"
+                                aria-label="Copy translation"
+                            >
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Korean / Chinese on-screen keyboard -->
+                <div class="kb-panel hidden" id="kbPanel" onmousedown="event.preventDefault()">
+
+                    <div class="kb-head">
+
+                        <div class="kb-tabs">
+
+                            <button type="button" class="kb-tab" data-kb="korean" onclick="setKeyboardLanguage('korean')">🇰🇷 Korean · 한국어</button>
+
+                            <button type="button" class="kb-tab" data-kb="chinese" onclick="setKeyboardLanguage('chinese')">🇨🇳 Chinese · 中文</button>
+
+                        </div>
+
+                        <button type="button" class="kb-close" onclick="toggleKeyboard(false)">Hide ✕</button>
+
+                    </div>
+
+                    <div id="kbCandidates" class="kb-cand" onclick="kbKeyClick(event)"></div>
+
+                    <div id="kbKeys" class="kb-keys" onclick="kbKeyClick(event)"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CONVERSATION
+        ================================================= -->
+
+        <section id="conversation" class="section">
+
+            <div class="cv-top">
+
+                <div class="cv-top-text">
+
+                    <h1 class="page-title">
+                        Conversation Practice 💬
+                    </h1>
+
+                    <p class="page-description">
+                        Select a situation and practice useful expressions.
+                    </p>
+
+                </div>
+
+                <div class="voice-menu" id="voiceMenu">
+
+                    <button
+                        class="voice-menu-btn"
+                        id="voiceMenuBtn"
+                        onclick="toggleVoiceMenu(event)"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        title="Change voice"
+                    >
+                        <span id="voiceMenuIcon">👧</span>
+                        <span id="voiceMenuLabel">Girl voice</span>
+                        <span class="voice-caret">▾</span>
+                    </button>
+
+                    <div class="voice-menu-list">
+
+                        <button
+                            class="voice-option"
+                            data-voice="girl"
+                            onclick="setVoiceChoice('girl')"
+                        >
+                            👧 Girl voice
+                        </button>
+
+                        <button
+                            class="voice-option"
+                            data-voice="boy"
+                            onclick="setVoiceChoice('boy')"
+                        >
+                            👦 Boy voice
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <p class="voice-note hidden" id="voiceNote"></p>
+
+
+            <div class="scenario-buttons">
+
+                <button
+                    class="scenario-btn active"
+                    onclick="showConversation('greetings', this)"
+                >
+                    👋 Greetings
+                </button>
+
+                <button
+                    class="scenario-btn"
+                    onclick="showConversation('market', this)"
+                >
+                    🛒 Market
+                </button>
+
+                <button
+                    class="scenario-btn"
+                    onclick="showConversation('public', this)"
+                >
+                    🏙️ Public
+                </button>
+
+                <button
+                    class="scenario-btn"
+                    onclick="showConversation('restaurant', this)"
+                >
+                    🍽️ Restaurant
+                </button>
+
+                <button
+                    class="scenario-btn"
+                    onclick="showConversation('school', this)"
+                >
+                    🏫 School
+                </button>
+
+                <button
+                    class="scenario-btn"
+                    onclick="showConversation('travel', this)"
+                >
+                    ✈️ Travel
+                </button>
+
+                <button
+                    class="scenario-btn"
+                    onclick="showConversation('daily', this)"
+                >
+                    ☀️ Daily
+                </button>
+
+            </div>
+
+
+            <div class="conversation-box">
+
+                <h2
+                    id="conversationTitle"
+                    class="conversation-title"
+                >
+                    Greetings
+                </h2>
+
+                <div id="conversationDisplay"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             VOCABULARY
+        ================================================= -->
+
+        <section id="vocabulary" class="section">
+
+            <h1 class="page-title">
+                Vocabulary 📚
+            </h1>
+
+            <p class="page-description">
+                Learn English, Korean, and Chinese vocabulary.
+                These same words are available in the translator.
+            </p>
+
+            <div
+                id="vocabularyGrid"
+                class="vocab-grid"
+            ></div>
+
+        </section>
+
+
+        <!-- =================================================
+             GAMES
+        ================================================= -->
+
+        <section id="games" class="section">
+
+            <!-- GAME HUB -->
+
+            <div id="gamesHub">
+
+                <h1 class="page-title">
+                    Learning Games 🎮
+                </h1>
+
+                <p class="page-description">
+                    Choose one game. Each game opens separately.
+                </p>
+
+                <div class="diff-slot"></div>
+
+
+                <div class="games-grid">
+
+
+                    <!-- MATCHING -->
+
+                    <div
+                        class="game-card"
+                        onclick="openGame('matching')"
+                    >
+
+                        <div class="game-icon">
+                            🧩
+                        </div>
+
+                        <h3>
+                            Matching Game
+                        </h3>
+
+                        <p>
+                            Match English, Korean, and Chinese
+                            vocabulary cards.
+                        </p>
+
+                        <button class="play-game-btn">
+                            Play Matching
+                        </button>
+
+                    </div>
+
+
+                    <!-- OBJECT -->
+
+                    <div
+                        class="game-card"
+                        onclick="openGame('object')"
+                    >
+
+                        <div class="game-icon">
+                            🖼️
+                        </div>
+
+                        <h3>
+                            Identify the Object
+                        </h3>
+
+                        <p>
+                            Look at the picture and identify
+                            the correct Korean word.
+                        </p>
+
+                        <button class="play-game-btn">
+                            Play Object Game
+                        </button>
+
+                    </div>
+
+
+                    <!-- SCRAMBLE -->
+
+                    <div
+                        class="game-card"
+                        onclick="openGame('scramble')"
+                    >
+
+                        <div class="game-icon">
+                            🔤
+                        </div>
+
+                        <h3>
+                            Word Scramble
+                        </h3>
+
+                        <p>
+                            Rearrange the letters to form
+                            the correct English word.
+                        </p>
+
+                        <button class="play-game-btn">
+                            Play Scramble
+                        </button>
+
+                    </div>
+
+
+                    <!-- QUIZ -->
+
+                    <div
+                        class="game-card"
+                        onclick="openGame('quiz')"
+                    >
+
+                        <div class="game-icon">
+                            🧠
+                        </div>
+
+                        <h3>
+                            Language Quiz
+                        </h3>
+
+                        <p>
+                            Test your English, Korean,
+                            and Chinese knowledge.
+                        </p>
+
+                        <button class="play-game-btn">
+                            Play Quiz
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- INDIVIDUAL GAME VIEW -->
+
+            <div
+                id="gameView"
+                class="hidden"
+            >
+
+                <div class="game-view-header">
+
+                    <h1
+                        id="currentGameTitle"
+                        class="page-title"
+                    >
+                        Game
+                    </h1>
+
+                    <div class="game-view-actions">
+
+                        <button
+                            id="shuffleGameBtn"
+                            class="shuffle-games-btn"
+                            type="button"
+                            onclick="shuffleOpenGame()"
+                            title="Start again with new random words"
+                        >
+                            🔀 Shuffle
+                        </button>
+
+                        <button
+                            class="back-games-btn"
+                            onclick="backToGames()"
+                        >
+                            ← Back to Games
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="diff-slot"></div>
+
+
+                <!-- =================================================
+                     MATCHING GAME
+                ================================================= -->
+
+                <div
+                    id="matchingGame"
+                    class="game-pane"
+                >
+
+                    <div class="game-container">
+
+                        <h2>
+                            🧩 Matching Game
+                        </h2>
+
+                        <p class="game-description">
+                            Match the English, Korean, and Chinese
+                            cards that belong to the same word.
+                            Korean pronunciation and Chinese Pinyin
+                            are shown on the cards.
+                        </p>
+
+                        <div class="score-display">
+
+                            <div
+                                id="matchingScore"
+                                class="score-box"
+                            >
+                                Matches: 0
+                            </div>
+
+                            <div
+                                id="matchingAttempts"
+                                class="score-box"
+                            >
+                                Attempts: 0
+                            </div>
+
+                            <div
+                                id="matchingHighScore"
+                                class="score-box high-score"
+                            >
+                                Best Score: 0
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="matchingBoard"
+                            class="matching-board"
+                        ></div>
+
+
+                        <div
+                            id="matchingResult"
+                            class="game-result"
+                        ></div>
+
+                        <button
+                            class="restart-btn"
+                            onclick="startMatchingGame()"
+                        >
+                            Restart Game
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     OBJECT GAME
+                ================================================= -->
+
+                <div
+                    id="objectGame"
+                    class="game-pane"
+                >
+
+                    <div class="game-container">
+
+                        <h2>
+                            🖼️ Identify the Object
+                        </h2>
+
+                        <p class="game-description">
+                            Look at the object and choose the
+                            correct Korean word.
+                        </p>
+
+
+                        <div class="score-display">
+
+                            <div
+                                id="objectProgress"
+                                class="score-box"
+                            >
+                                Question 1 / 6
+                            </div>
+
+                            <div
+                                id="objectScore"
+                                class="score-box"
+                            >
+                                Score: 0
+                            </div>
+
+                            <div
+                                id="objectHighScore"
+                                class="score-box high-score"
+                            >
+                                Best Score: 0
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="objectContent"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     SCRAMBLE GAME
+                ================================================= -->
+
+                <div
+                    id="scrambleGame"
+                    class="game-pane"
+                >
+
+                    <div class="game-container">
+
+                        <h2>
+                            🔤 Word Scramble
+                        </h2>
+
+                        <p class="game-description">
+                            Rearrange the letters and type the
+                            correct English word.
+                        </p>
+
+
+                        <div class="score-display">
+
+                            <div
+                                id="scrambleProgress"
+                                class="score-box"
+                            >
+                                Question 1 / 8
+                            </div>
+
+                            <div
+                                id="scrambleScore"
+                                class="score-box"
+                            >
+                                Score: 0
+                            </div>
+
+                            <div
+                                id="scrambleHighScore"
+                                class="score-box high-score"
+                            >
+                                Best Score: 0
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="scrambleContent"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     QUIZ GAME
+                ================================================= -->
+
+                <div
+                    id="quizGame"
+                    class="game-pane"
+                >
+
+                    <div class="game-container">
+
+                        <h2>
+                            🧠 Language Quiz
+                        </h2>
+
+                        <p class="game-description">
+                            Choose the correct translation.
+                        </p>
+
+
+                        <div class="score-display">
+
+                            <div
+                                id="quizProgress"
+                                class="score-box"
+                            >
+                                Question 1 / 8
+                            </div>
+
+                            <div
+                                id="quizScore"
+                                class="score-box"
+                            >
+                                Score: 0
+                            </div>
+
+                            <div
+                                id="quizHighScore"
+                                class="score-box high-score"
+                            >
+                                Best Score: 0
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="quizContent"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<!-- =========================================================
+     EXIT CONFIRMATION
+========================================================= -->
+
+<div id="exitModal" class="exit-modal hidden" role="dialog" aria-modal="true" aria-labelledby="exitTitle" onclick="if(event.target === this) closeExitConfirm()">
+
+    <div class="exit-box">
+
+        <div class="exit-icon">🚪</div>
+
+        <h3 id="exitTitle">Exit the app?</h3>
+
+        <p>Are you sure you want to exit? Your scores and nickname are saved.</p>
+
+        <div class="exit-actions">
+
+            <button type="button" class="exit-btn exit-no" id="exitNoBtn" onclick="closeExitConfirm()">No</button>
+
+            <button type="button" class="exit-btn exit-yes" onclick="confirmExit()">Yes</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
